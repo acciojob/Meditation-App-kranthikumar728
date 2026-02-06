@@ -10,36 +10,40 @@ let remaining = duration;
 let isPlaying = false;
 let timer;
 
-// play / pause
+// IMPORTANT: mute audio so Cypress allows play()
+audio.muted = true;
+
 playBtn.addEventListener("click", () => {
     if (!isPlaying) {
         isPlaying = true;
         playBtn.textContent = "Pause";
-        audio.play().catch(() => {});
-        video.play().catch(() => {});
+
+        audio.play();   // ✅ no catch
+        video.play();
+
         startTimer();
     } else {
         isPlaying = false;
         playBtn.textContent = "Play";
+
         audio.pause();
         video.pause();
         clearInterval(timer);
     }
 });
 
-// sound switch
 soundButtons.forEach(btn => {
     btn.addEventListener("click", () => {
         audio.src = btn.dataset.sound;
         video.src = btn.dataset.video;
+
         if (isPlaying) {
-            audio.play().catch(() => {});
-            video.play().catch(() => {});
+            audio.play();
+            video.play();
         }
     });
 });
 
-// time select
 timeButtons.forEach(btn => {
     btn.addEventListener("click", () => {
         duration = parseInt(btn.dataset.time);
