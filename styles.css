@@ -1,13 +1,12 @@
-/*  your css code here. If applicable */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #111;
-    color: white;
+    background: #000;
+    color: #fff;
     text-align: center;
 }
 
-#app {
+.app {
     height: 100vh;
     position: relative;
 }
@@ -18,47 +17,31 @@ body {
     object-fit: cover;
 }
 
-.player-container {
-    display: none;
-}
-
-.sound-picker {
+.sound-picker,
+.time-select {
     position: absolute;
     top: 20px;
-    left: 20px;
 }
 
-.sound-picker button {
-    margin: 5px;
+.sound-picker { left: 20px; }
+.time-select { right: 20px; }
+
+button {
     padding: 10px;
-    cursor: pointer;
-}
-
-#time-select {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-#time-select button {
     margin: 5px;
-    padding: 10px;
     cursor: pointer;
-}
-
-.controls {
-    position: absolute;
-    bottom: 30px;
-    width: 100%;
 }
 
 .play {
-    padding: 12px 20px;
-    font-size: 16px;
-    cursor: pointer;
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .time-display {
-    margin-top: 10px;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
     font-size: 24px;
 }

@@ -7,42 +7,29 @@
 </head>
 <body>
 
-<div id="app">
+<div class="app">
 
-    <!-- Video Section -->
     <div class="vid-container">
-        <video loop>
-            <source src="Videos/beach.mp4" type="video/mp4">
-        </video>
+        <video src="Videos/beach.mp4" loop></video>
     </div>
 
-    <!-- Audio Section -->
     <div class="player-container">
-        <audio></audio>
+        <audio src="Sounds/beach.mp3"></audio>
     </div>
 
-    <!-- Sound Picker -->
     <div class="sound-picker">
-        <button data-sound="Sounds/beach.mp3" data-video="Videos/beach.mp4">
-            Meditation-A
-        </button>
-        <button data-sound="Sounds/rain.mp3" data-video="Videos/rain.mp4">
-            Meditation-B
-        </button>
+        <button data-sound="Sounds/beach.mp3" data-video="Videos/beach.mp4">Meditation-A</button>
+        <button data-sound="Sounds/rain.mp3" data-video="Videos/rain.mp4">Meditation-B</button>
     </div>
 
-    <!-- Time Select -->
-    <div id="time-select">
-        <button id="smaller-mins" data-time="120">2 Min</button>
-        <button id="medium-mins" data-time="300">5 Min</button>
-        <button id="long-mins" data-time="600">10 Min</button>
+    <div class="time-select">
+        <button class="smaller-mins" data-time="120">2 Min</button>
+        <button class="medium-mins" data-time="300">5 Min</button>
+        <button class="long-mins" data-time="600">10 Min</button>
     </div>
 
-    <!-- Controls -->
-    <div class="controls">
-        <button class="play">Play</button>
-        <div class="time-display">10:0</div>
-    </div>
+    <button class="play">Play</button>
+    <div class="time-display">10:0</div>
 
 </div>
 
